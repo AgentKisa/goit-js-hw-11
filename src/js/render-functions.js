@@ -12,6 +12,13 @@ export function getLoaderHtml() {
   return '<div class="loader"></div>';
 }
 
+export function emptyRow() {
+  iziToast.warning({
+    title: 'Ooops',
+    position: 'topRight',
+  });
+}
+
 export function showAlertNotFound() {
   iziToast.error({
     title: 'Error',

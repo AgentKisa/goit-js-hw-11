@@ -9,12 +9,10 @@ form.addEventListener('submit', e => {
   const query = e.target.elements.searchInput.value.trim();
 
   if (query === '') {
-    iziToast.warning({
-      title: 'Ooops',
-      position: 'topRight',
-    });
+    render.emptyRow();
     return;
   }
+
   gallery.innerHTML = render.getLoaderHtml();
 
   api.sendRequest(query, handleResponse);
