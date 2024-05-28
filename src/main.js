@@ -9,7 +9,7 @@ form.addEventListener('submit', e => {
   const query = e.target.elements.searchInput.value.trim();
 
   if (query === '') {
-    render.emptyRow();
+    render.showInputNotFound();
     return;
   }
 

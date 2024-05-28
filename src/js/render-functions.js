@@ -12,9 +12,9 @@ export function getLoaderHtml() {
   return '<div class="loader"></div>';
 }
 
-export function emptyRow() {
+export function showInputNotFound() {
   iziToast.warning({
-    title: 'Ooops',
+    title: 'Fill in the search field',
     position: 'topRight',
   });
 }
