@@ -5,10 +5,18 @@ const form = document.querySelector('.form');
 const gallery = document.querySelector('.gallery');
 
 form.addEventListener('submit', e => {
-  gallery.innerHTML = render.getLoaderHtml();
-
   e.preventDefault();
   const query = e.target.elements.searchInput.value.trim();
+
+  if (query === '') {
+    iziToast.warning({
+      title: 'Ooops',
+      position: 'topRight',
+    });
+    return;
+  }
+  gallery.innerHTML = render.getLoaderHtml();
+
   api.sendRequest(query, handleResponse);
 });
 
