@@ -7,5 +7,5 @@ import{S as c,i as l}from"./assets/vendor-8c59ed88.js";(function(){const r=docum
         <p class="icon">Comments: ${e.comments}</p>
         <p class="icon">Downloads: ${e.downloads}</p>
       </div>
-    </a>`}function g(e){return e.map(r=>h(r)).join("")}const y=document.querySelector(".form"),a=document.querySelector(".gallery");y.addEventListener("submit",e=>{a.innerHTML=m(),e.preventDefault();const r=e.target.elements.searchInput.value.trim();f(r,L)});function L(e){if(!e.total&&e.total==0){p(),a.innerHTML="";return}const r=e.hits;console.log("response",e);const s=g(r);a.innerHTML=s,d.refresh()}
+    </a>`}function g(e){return e.map(r=>h(r)).join("")}const y=document.querySelector(".form"),a=document.querySelector(".gallery");y.addEventListener("submit",e=>{e.preventDefault();const r=e.target.elements.searchInput.value.trim();if(r===""){iziToast.warning({title:"Ooops",position:"topRight"});return}a.innerHTML=m(),f(r,L)});function L(e){if(!e.total&&e.total==0){p(),a.innerHTML="";return}const r=e.hits;console.log("response",e);const s=g(r);a.innerHTML=s,d.refresh()}
 //# sourceMappingURL=commonHelpers.js.map
